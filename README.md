@@ -6,7 +6,7 @@
 
 ---
 
-## 📝 À propos
+##  À propos
 
 Bienvenue sur mon portfolio technique. Ce dépôt centralise les projets clés de ma formation d'ingénieur à l'ENSA.
 
@@ -16,7 +16,7 @@ Mon approche vise le **"Security by Design"** : démontrer une maîtrise techniq
 
 ---
 
-## 🛠️ Vue d'ensemble des compétences
+##  Vue d'ensemble des compétences
 
 | Domaine | Technologies & Outils |
 | :--- | :--- |
@@ -28,7 +28,7 @@ Mon approche vise le **"Security by Design"** : démontrer une maîtrise techniq
 
 ---
 
-## 📫 Contact
+##  Contact
 *Pour toute opportunité ou question technique :*
-* 💼 https://www.linkedin.com/in/amine-belamine-6154031a4/
-* 📧 belamineamine2004@gmail.com
+* LinkedIn :  https://www.linkedin.com/in/amine-belamine-6154031a4/
+* Email : belamineamine2004@gmail.com
