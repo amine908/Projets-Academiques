@@ -1,0 +1,46 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\hp\Desktop\File tranfser app\Codes\Server.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\hp\Desktop\File tranfser app\Codes\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin;C:\WINDOWS\system32\WBEM;C:\Windows\system32\WBEM;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\dotnet\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;;C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin
+JRE paths:	;C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin;C:\WINDOWS\system32\WBEM;C:\Windows\system32\WBEM;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\dotnet\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;;C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin
+Check launcher:	C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin\javaw.exe (OK)
+Version string: 1.022.000_002 / 64-Bit (OK)
+Main class:	ServerMain
+Add classpath:	libs\sqlite-jdbc-3.47.1.0.jar
+Add classpath:	libs\mysql-connector-j-9.1.0.jar
+Launcher:	C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\hp\Desktop\File tranfser app\Codes\Server.exe;libs\sqlite-jdbc-3.47.1.0.jar;libs\mysql-connector-j-9.1.0.jar" ServerMain
+Args length:	141/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\hp\Desktop\File tranfser app\Codes\Client.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\hp\Desktop\File tranfser app\Codes\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin;C:\WINDOWS\system32\WBEM;C:\Windows\system32\WBEM;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\dotnet\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;;C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin
+JRE paths:	;C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin;C:\WINDOWS\system32\WBEM;C:\Windows\system32\WBEM;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\dotnet\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Nmap;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;;C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin
+Check launcher:	C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin\javaw.exe (OK)
+Version string: 1.022.000_002 / 64-Bit (OK)
+Main class:	ClientMain
+Add classpath:	libs\sqlite-jdbc-3.47.1.0.jar
+Add classpath:	libs\mysql-connector-j-9.1.0.jar
+Launcher:	C:\Program Files\OpenLogic\jdk-22.0.2.9-hotspot\bin\javaw.exe
+Launcher args:	-classpath "C:\Users\hp\Desktop\File tranfser app\Codes\Client.exe;libs\sqlite-jdbc-3.47.1.0.jar;libs\mysql-connector-j-9.1.0.jar" ClientMain
+Args length:	141/32768 chars
+Exit code:	0
