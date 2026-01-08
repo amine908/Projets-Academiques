@@ -1,0 +1,86 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use std.textio.all; 
+
+--======================================================================
+-- TEST BENCH: CSPRNG_tb
+-- Optimized for universal VHDL-93/02 compatibility.
+--======================================================================
+entity CSPRNG_tb is
+end entity CSPRNG_tb;
+
+architecture behavioral of CSPRNG_tb is
+
+  -- Component declaration for the DUT
+  component CSPRNG
+    port (
+      clk       : in  std_logic;
+      reset     : in  std_logic;
+      key_out   : out std_logic_vector(127 downto 0);
+      key_valid : out std_logic
+    );
+  end component CSPRNG;
+
+  -- Test Bench Signals
+  signal tb_clk       : std_logic := '0';
+  signal tb_reset     : std_logic := '1';
+  signal tb_key_out   : std_logic_vector(127 downto 0);
+  signal tb_key_valid : std_logic;
+
+  -- Constants
+  constant CLK_PERIOD : time := 10 ns; 
+
+begin
+
+  -- 1. DUT Instantiation
+  DUT : CSPRNG
+    port map (
+      clk       => tb_clk,
+      reset     => tb_reset,
+      key_out   => tb_key_out,
+      key_valid => tb_key_valid
+    );
+
+  -- 2. Clock Generation
+  CLK_GEN : process
+  begin
+    loop
+      wait for CLK_PERIOD / 2;
+      tb_clk <= not tb_clk;
+    end loop;
+  end process CLK_GEN;
+
+  -- 3. Stimulus Generation
+  STIMULUS : process
+  begin
+    -- Step 1: Initialization and Reset Pulse
+    report "--- Starting CSPRNG Test Bench Simulation ---" severity NOTE;
+    tb_reset <= '1';
+    wait for CLK_PERIOD * 5; 
+
+    tb_reset <= '0';
+    report "Reset deasserted. CSPRNG should start first key generation." severity NOTE;
+
+    -- Step 2: Monitor Key Generation
+    
+    -- Wait for the first key to become valid
+    wait until rising_edge(tb_clk) and tb_key_valid = '1';
+    report "KEY 1 generated at T=" & integer'image(now / CLK_PERIOD) & ". Check wave viewer (tb_key_out) for the 128-bit hex value." severity NOTE;
+
+    -- Wait for the second key to become valid
+    wait until rising_edge(tb_clk) and tb_key_valid = '1';
+    report "KEY 2 generated at T=" & integer'image(now / CLK_PERIOD) & ". Check wave viewer (tb_key_out) for the 128-bit hex value." severity NOTE;
+    
+    -- Wait for the third key to become valid
+    wait until rising_edge(tb_clk) and tb_key_valid = '1';
+    report "KEY 3 generated at T=" & integer'image(now / CLK_PERIOD) & ". Check wave viewer (tb_key_out) for the 128-bit hex value." severity NOTE;
+    
+    -- Step 3: End Simulation
+    report "--- Test Complete: 3 keys generated and verified in waves ---" severity NOTE;
+    wait for CLK_PERIOD * 10;
+    assert false report "Simulation finished." severity failure;
+
+  end process STIMULUS;
+
+end architecture behavioral;

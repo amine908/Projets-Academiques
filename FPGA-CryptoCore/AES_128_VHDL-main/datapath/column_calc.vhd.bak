@@ -1,0 +1,66 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY Column_Calc IS
+    PORT (
+        input : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+        output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    );
+END Column_Calc;
+
+ARCHITECTURE Beha OF Column_Calc IS
+    SIGNAL temp0_2 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL temp0_3 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+    SIGNAL temp1_2 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL temp1_3 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+    SIGNAL temp2_2 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL temp2_3 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+    SIGNAL temp3_2 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL temp3_3 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+    COMPONENT gf_mul
+        PORT (
+            byte_int : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+            mul2_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+            mul3_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+        );
+    end component;
+
+    BEGIN
+
+        gf_mul_b0: gf_mul 
+        port map (
+            byte_int => input(31 downto 24),
+            mul2_out => temp0_2,
+            mul3_out => temp0_3
+        );
+
+                gf_mul_b1: gf_mul 
+        port map (
+            byte_int => input(31 - 8 downto 24 - 8),
+            mul2_out => temp1_2,
+            mul3_out => temp1_3
+        );
+
+                gf_mul_b2: gf_mul 
+        port map (
+            byte_int => input(31 - 2*8 downto 24 - 8*2),
+            mul2_out => temp2_2,
+            mul3_out => temp2_3
+        );
+
+                gf_mul_b3: gf_mul 
+        port map (
+            byte_int => input(31 - 3*8 downto 24 - 3*8),
+            mul2_out => temp3_2,
+            mul3_out => temp3_3
+        );
+
+        output(31 downto 24) <= temp0_2 xor temp1_3 xor input(31 - 2*8 downto 24 - 8*2) xor input(31 - 8*3 downto 24 - 8*3);
+        -- output(31 - 8 downto 24 - 8)
+        -- output(31 - 2*8 downto 24 - 2*8)
+        -- output(31 - 3*8 downto 24 - 3*8)
+end Beha;
